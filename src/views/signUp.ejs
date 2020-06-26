@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="author" name="VISHNU KS">
+    <meta name="description" content="Library Web-Page">
+
+    <title>Library Shelf</title>
+    <link rel="icon" href="img/book-icn.jpg" type="image">
+
+        <!-- css linkage -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/signUp.css">
+<link rel="stylesheet" href="css/validating.css">
+
+<!--bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!--bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: rgb(214, 223, 167);">
+      <!-- header nav -->
+    <nav class="navbar navbar-expand-sm">
+         <a class="navbar-brand" href="<%= nav[0].link%>"></a>    <!-- <img src="img/book-icn.jpg" alt="" class="icn"> -->
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <%for(i=0;i<nav.length;i++){%>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="<%= nav[i].link%>"><%=nav[i].name%></a>
+              </li>
+              <%}%>  
+              
+          </ul>
+        </div>
+      </nav>
+      <!-- header nav end -->
+      
+<div class="container" style="border: 1px solid rebeccapurple;border-radius: 15px;background-color: white;margin-top: 20px;width: 70%;">
+  <h4 style="text-align: center;font-family: 'Baloo 2', cursive;color: rgb(2, 2, 54);margin-top: 10px;margin-bottom: 10px;">Sign-Up</h4>  
+  <form action="/signUp/submitData" method="POST" onsubmit="return checkPassword()">
+        <div class="form-row signUpRows text-info">
+            <div class="col-md-6">
+                        
+            <label for="firstNameText">First Name</label>
+            <input type="text" class="form-control" id="firstNameText" name="fname">
+            <small id="firstNameHelp" class="form-text" style="font-size: 12pt;"></small>
+            
+            </div>
+            
+            <div class="col-md-6">
+            
+            <label for="lastNameText">Last Name</label>
+            <input type="text" class="form-control" id="lastNameText" name="lname">
+            <small id="lastNameHelp" class="form-text" style="font-size: 12pt;"></small>
+            
+            </div>
+        </div>               
+       <!-- form row2 - gender radios, DOB -->
+       <div class="form-row signUpRows text-info">
+
+        <div class="col-md-2" style="margin-top: 10px;">
+        <label for="genderRadio">Gender</label>  
+        </div>
+             
+        <div class="col-md-5" style="margin-top: 10px;">
+        
+        <div class="form-check form-check-inline custom-radio">
+        <input class="form-check-input" type="radio" name="gender" id="radioMale" value="Male"> 
+        <label class="form-check-label" for="radioMale">Male</label>
+        </div>
+        <div class="form-check form-check-inline custom-radio">
+        <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="Female">
+        <label class="form-check-label" for="radioFemale">Female</label>
+        </div>
+        <div class="form-check form-check-inline custom-radio">
+        <input class="form-check-input" type="radio" name="gender" id="radioOther" value="Other">
+        <label class="form-check-label" for="radioOther">Other</label>
+        </div>
+        <small id="genderHelp" class="form-text" style="font-size: 12pt;"></small>
+        
+        </div>
+
+        <div class="col-md-5">
+            <label for="dateOfBirth">Date Of Birth</label>
+            <input type="date" name="dob" id="dateOfBirth" min="1940-01-01" max="2005-12-31">
+            <small id="dateHelp" class="form-text" style="font-size: 12pt;"></small>
+        </div>
+       </div>
+        <!-- form row3 phone num, address -->
+       <div class="form-row signUpRows text-info">
+        <div class="col-md-5">
+            <label for="phoneText">Phone Number</label>
+            <input type="text" class="form-control" id="phoneText" name="phone" placeholder="xxx xxx xxxx">
+            <small id="phoneHelp" class="form-text" style="font-size: 13pt;">xxx-xxx-xxxx or xxx.xxx.xxxx</small>
+        </div>
+        <div class="col-md-7">
+            <label for="addressText">Address</label>
+            <input type="text" class="form-control" id="addressText" name="address" placeholder="enter address">
+            <small id="addressHelp" class="form-text" style="font-size: 12pt;">house,postoffice,place,district,pin :no white spaces allowed</small>
+        </div>
+       </div>
+        <!-- form row4 email -->
+       <div class="form-row signUpRows text-info">
+        <div class="col-md-6">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="emailText" name="email">
+            <small id="emailHelp" class="form-text" style="font-size: 12pt;"></small>
+        </div>  
+        <div class="col-md-6" style="margin-top: 40px;">
+          <label for="userRadio">Usertype</label>  
+          
+            <div class="form-check form-check-inline custom-radio">
+            <input class="form-check-input" type="radio" name="userType" id="radioAdmin" value="admin"> 
+            <label class="form-check-label" for="radioAdmin">Admin</label>
+            </div> 
+             <div class="form-check form-check-inline custom-radio">
+            <input class="form-check-input" type="radio" name="userType" id="radioNormal" value="normal" checked>
+            <label class="form-check-label" for="radioNormal">Normal User</label>
+            </div>           
+           
+          <small id="userHelp" class="form-text" style="font-size: 12pt;"></small>
+      </div> 
+       </div>
+                    <!-- password div -->
+              <div id="passwordDiv" class="hideDiv">
+                <div class="form-row signUpRows text-info">
+                    <div class="col-md-6">
+                      <label for="passwordText">Password</label>
+                      <input type="text" class="form-control" id="passwordText" name="password">
+                      <small id="passwordHelp" class="form-text" style="font-size: 12pt;">requirements:-: 8 characters, 1 lower case, 1 upper case, 1 number, 1 among[!@#$%&*] and no blank spaces</small>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="confirmPasswordText">Confirm Password</label>
+                      <input type="text" class="form-control" id="confirmPasswordText" aria-describedby="inputGroupPrepend">
+                      <small id="confirmPasswordHelp" class="form-text" style="font-size: 12pt;"></small>
+                    </div>
+
+                </div>
+              </div>
+       <div id="forwardDiv" class="forwardBtns" style="margin: 10px 0 15px 155px;">
+
+        <button class="btn btn-primary btnSubmit col-md-4" type="button" onclick="validateSignUp()">Continue</button>
+        <button class="btn btn-warning btnCancel col-md-4" onclick="location.href='<%= nav[0].link%>'">Cancel</button>
+        
+        </div>
+       <div id="loginDiv" class="logInBtns hideDiv">
+
+        <button class="btn btn-primary btnSubmit col-md-4" type="submit">Submit</button>
+        <button class="btn btn-warning btnCancel col-md-4" type="button" onclick="cancelSignupSubmit()">Cancel</button>
+        
+        </div>
+    </form>
+</div>
+
+      <footer>
+        <div class="container">
+         <h5 class="blinking">Follow Us</h5>
+         <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+             <button type="button" class="btn btn-primary text-white">Twitter</button>
+             <button id="btn2" type="button" class="btn text-white">Facebook</button>
+             <button type="button" class="btn btn-danger text-white">Google+</button>
+           </div>
+        </div>
+     </footer>
+               <!-- footer section end -->
+  <script src="js/validations.js"></script>
+</body>
+</html>

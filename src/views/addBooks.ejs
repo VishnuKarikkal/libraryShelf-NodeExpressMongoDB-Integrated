@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="author" name="VISHNU KS">
+    <meta name="description" content="Library Web-Page">
+    <title>Library Shelf</title>
+    <link rel="icon" href="/img/book-icn.jpg" type="image">
+        <!-- css linkage -->
+<link rel="stylesheet" href="/css/styles.css">
+
+<!--bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!--bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: rgb(214, 223, 167);">
+      <!-- header nav -->
+    <nav class="navbar navbar-expand-sm">
+         <a class="navbar-brand" href="/"></a>    <!-- <img src="img/book-icn.jpg" alt="" class="icn"> -->
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <%for(i=0;i<nav.length;i++){%>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="<%= nav[i].link%>"><%=nav[i].name%></a>
+            </li>
+            <%}%>
+                      
+          </ul>
+        </div>
+      </nav>
+      <!-- header nav end -->
+      <!-- titleSection -->
+<section id="titleSection">
+        <div class="container">
+            <h1>Add Books to the Library</h1>
+          </div>
+</section>
+      <!-- titleSection end -->
+             <!-- book-section start -->
+<section id="authorSection" class="bg-light">
+<div class="container">
+    <div class="row">
+        <form class="form-signin" action="/addBooks/addBook" method="POST" style="border: 1px dotted grey;border-radius: 15px;margin: 0 auto;text-align: center;align-items: center;height: 650px;width:600px;padding-top: 15px;padding-bottom: 15px;margin-bottom: 30px;">
+          <label for="title" style="margin-right: 30px;">Title:</label><input type="text" name="title"><br>
+          <label for="title" style="margin-right: 10px;">Author:</label><input type="text" name="author"><br>
+          <label for="title" style="margin-right: 20px;">Genre:</label><input type="text" name="genre"><br>
+          <label for="title" style="margin-right: 5px;">Image:</label><input id="img" type="file" name="image" style="border: 1px dotted darkblue;" accept="image/*" onchange="showFiles()"><br>
+            <div class="container" style="border: 1px dotted yellowgreen;border-radius: 15px;height: 350px;width: 350px;">
+                <img id="preview" src="" alt="" width="320px" height="320px" style="margin: 0 auto;margin-top: 10px;border: 3px solid crimson;border-radius: 15px;">
+            </div>
+          <button id="addBtn" class="btn btn-warning text-white" type="submit" style="margin-top: 15px;">Add to the Library</button>
+        </form>
+    </div>
+</div>
+    
+</section>
+            <!-- book-section end -->
+            <!-- footer section -->
+<footer>
+   <div class="container">
+    <h5 class="blinking">Follow Us</h5>
+    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary text-white">Twitter</button>
+        <button id="btn2" type="button" class="btn text-white">Facebook</button>
+        <button type="button" class="btn btn-danger text-white">Google+</button>
+      </div>
+   </div>
+</footer>
+          <!-- footer section end -->
+          <!-- scripts -->
+<script src="/js/filePreview.js"></script>
+</body>
+</html>

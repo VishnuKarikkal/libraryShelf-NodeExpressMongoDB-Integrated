@@ -1,0 +1,72 @@
+.hideDiv
+{
+    display: none;
+}
+.showDiv
+{
+    display: block;
+}
+.btnCancel
+  {
+    font-family: 'Baloo 2', cursive;
+      background-color: yellow; 
+      color:blue; 
+     
+      transition-duration: 0.4s;
+  }
+  .forwardBtns .btnSubmit:hover
+  {
+    background-color: rgb(0, 255, 85);
+    color: darkblue;
+  }
+  .forwardBtns .btnCancel:hover
+  {
+  background-color: red;
+  color: white;
+  }
+  .logInBtns .btnCancel:hover
+  {
+  background-color: red;
+  color: white;
+  }
+.btnSubmit
+{
+    font-family: 'Baloo 2', cursive;
+    background-color: blue;
+    color: white;
+}
+.logInBtns .btnSubmit:hover
+{
+    background-color: yellow;
+    color: darkblue;
+}
+.signUpRows
+{
+    font-family: 'Baloo 2', cursive;
+}
+.logInBtns
+  {
+    margin: 10px 0 15px 155px;
+  }
+  .signUpRows
+  {
+    margin: 10px 0 10px 0;
+  }
+  input[type="date"]
+  {
+    /* background-color: rgb(241, 229, 229); */
+    outline: none;
+    margin: 0 auto;
+    border-radius: 3px; border: 1px solid gray;
+    padding: 0 3px;
+    color: rgb(209, 25, 25);
+  }
+  input[type="date"]::-webkit-inner-spin-button
+  {
+    display: none;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator
+  {
+    font-size: 15px;
+  }

@@ -1,0 +1,12 @@
+.good
+{
+    color: green !important;
+}
+.wrong
+{
+    color: red !important;
+}
+.warning
+{
+    color: chocolate;
+}

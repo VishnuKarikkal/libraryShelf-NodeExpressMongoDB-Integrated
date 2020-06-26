@@ -1,0 +1,166 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+.active
+{
+  background-color: blueviolet;
+  border-radius: 35px;
+}
+nav
+{
+    font-family: 'Baloo 2', cursive;
+    background-color: rgb(9, 9, 134);
+}
+nav ul
+{
+margin-left: 80px;
+}
+nav li
+{
+border-radius: 35px;
+}
+nav li:hover
+{
+  background-color: blueviolet;
+}
+.icn
+{
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+}
+#titleSection
+{
+  font-family: 'Berkshire Swash', cursive;
+  min-height: 200px;
+  color: white;
+  background-color: rgb(2, 2, 54);
+  padding-top: 40px;
+}
+#authorSection
+{
+    /* border: 2px solid saddlebrown; */
+    border-radius: 15px;
+    width: 85%;
+    margin-left: 8%;
+    margin-top: -4%;
+    padding-left: 60px;
+    padding-top: 60px;
+    text-align: left;
+}
+#authorSection h3
+{
+  font-family: 'Gayathri', sans-serif;
+  color: blueviolet;
+}
+#authorSection p
+{
+  font-family: 'Titan One', cursive;
+  color: chocolate;
+}
+#authorSection cite
+{
+  color: coral;
+}
+.authorImg
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.moreBooks
+{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: block;
+    /* align-items:center;
+    justify-content: center; */
+    padding-right: 20px;
+  }
+  .hideRow
+  {
+    /* visibility: hidden; */
+    display: none !important;;
+  }
+  footer
+  {
+      margin-top: 15px;
+      margin-bottom: 50px;
+      padding-top: 5px;
+  }
+  footer .container
+  {
+    font-family: 'Indie Flower', cursive;
+  }
+  footer h5
+  {
+      color: grey;
+  }
+  footer .btn-primary:hover
+  {
+      background-color: blueviolet;
+  }
+  footer .btn-danger:hover
+  {
+      background-color: blueviolet;
+  }
+  #btn2
+  {
+    background-color: rgb(2, 2, 54);
+    border-color: rgb(2, 2, 54);
+  }
+  #btn2:hover
+  {
+    background-color: blueviolet;
+  }
+  #authorSection .btn-info:hover
+  {
+    background-color: chocolate;
+  }
+  #authorSection #addBtn:hover
+  {
+    background-color: blueviolet;
+  }
+  #authorSection .btn-danger:hover
+  {
+    background-color: yellow;
+    color: black !important;
+  }
+  .blinking
+  {
+    animation: blinkingText 1.5s infinite;
+  }
+  @keyframes blinkingText
+  {
+    0%{     color: rgb(236, 223, 223);    }
+    20%{     color: rgb(202, 187, 187);    }
+    49%{    color: rgb(153, 141, 141); }
+    60%{    color: rgb(107, 93, 93); }
+    80%{    color: rgb(95, 83, 83); }
+    99%{    color:rgb(66, 58, 58);  }
+    100%{   color: #000;    }
+  }
+.active
+{
+  animation: blinkingBGColor 4s infinite;
+}
+@keyframes blinkingBGColor
+  {
+    0%{     background-color: rgb(2, 2, 54);    }
+    20%{    background-color: rgb(7, 7, 78);    }
+    49%{    background-color: rgb(13, 13, 107); }
+    60%{    background-color: rgb(25, 25, 126); }
+    80%{    background-color: rgb(38, 38, 160); }
+    99%{    background-color:rgb(60, 60, 177);  }
+    100%{   background-color:rgb(81, 81, 211);    }
+  }
+
+  .custom-toggler.navbar-toggler {
+    border-color: rgb(255,102,203);
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(9,55,244, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}

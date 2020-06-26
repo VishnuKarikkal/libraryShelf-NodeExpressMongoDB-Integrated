@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="author" name="VISHNU KS">
+    <meta name="description" content="Library Web-Page">
+    <title>Library Shelf</title>
+    <link rel="icon" href="img/book-icn.jpg" type="image">
+        <!-- css linkage -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!--bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!--bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: rgb(214, 223, 167);">
+      <!-- header nav -->
+    <nav class="navbar navbar-expand-sm">
+         <a class="navbar-brand" href="/"></a>    <!-- <img src="img/book-icn.jpg" alt="" class="icn"> -->
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <%for(i=0;i<nav.length;i++){%>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="<%= nav[i].link%>"><%=nav[i].name%></a>
+            </li>
+            <%}%>
+                      
+          </ul>
+        </div>
+      </nav>
+      <!-- header nav end -->
+      <!-- titleSection -->
+<section id="titleSection">
+        <div class="container">
+            <h1>Library Shelf</h1>
+          </div>
+</section>
+      <!-- titleSection end -->
+             <!-- author-section start -->
+<section id="authorSection" class="bg-light">
+<div class="container">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-4"><img src="img/writer1.jpeg" alt="" class="authorImg"></div>
+        <div class="col-md-8" style="padding-top: 10px;">
+            <h3>‎ബാല്യകാലസഖി</h3>
+            <blockquote class="blockquote mb-0">
+                <p>Vaikom Muhammad Basheer.</p>
+                <footer class="blockquote-footer text-primary">
+                  <small>
+                    Read More from <a href="https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B5%88%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%82_%E0%B4%AE%E0%B5%81%E0%B4%B9%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%A6%E0%B5%8D_%E0%B4%AC%E0%B4%B7%E0%B5%80%E0%B5%BC"><cite title="..more information from web">Wikipedia</cite></a>
+                  </small>
+                </footer>
+              </blockquote>
+        </div>
+        <hr style="width: 96%;">   
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-4"><img src="img/writer2.jpeg" alt="" class="authorImg"></div>
+        <div class="col-md-8">
+            <h3>‎കയർ </h3>
+            <blockquote class="blockquote mb-0">
+                <p> Thakazhi Sivasankara Pillai.</p>
+                <footer class="blockquote-footer text-primary">
+                  <small>
+                    Read More from <a href="https://ml.wikipedia.org/wiki/%E0%B4%A4%E0%B4%95%E0%B4%B4%E0%B4%BF_%E0%B4%B6%E0%B4%BF%E0%B4%B5%E0%B4%B6%E0%B4%99%E0%B5%8D%E0%B4%95%E0%B4%B0%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BF%E0%B4%B3%E0%B5%8D%E0%B4%B3"><cite title="..more information from web">Wikipedia</cite></a>
+                  </small>
+                </footer>
+              </blockquote>
+        </div>
+        <hr style="width: 96%;">
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-4"><img src="img/writer3.jpg" alt="" class="authorImg"></div>
+        <div class="col-md-8">
+            <h3>‎നീർമാതളം പൂത്ത കാലം</h3>
+            <blockquote class="blockquote mb-0">
+                <p>Kamala Surayya.</p>
+                <footer class="blockquote-footer text-primary">
+                  <small>
+                    Read More from <a href="https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%AE%E0%B4%B2_%E0%B4%B8%E0%B5%81%E0%B4%B1%E0%B4%AF%E0%B5%8D%E0%B4%AF"><cite title="..more information from web">Wikipedia</cite></a>
+                  </small>
+                </footer>
+              </blockquote>
+        </div>
+        <hr style="width: 96%;">
+    </div>
+    <div class="row hideRow" style="margin-top: 10px;">
+      <div class="col-md-4"><img src="img/writer4.jpeg" alt="" class="authorImg"></div>
+      <div class="col-md-8">
+          <h3>‎അഗ്നിസാക്ഷി</h3>
+          <blockquote class="blockquote mb-0">
+              <p>Lalithambika Antharjanam.</p>
+              <footer class="blockquote-footer text-primary">
+                <small>
+                  Read More from <a href="https://en.wikipedia.org/wiki/Lalithambika_Antharjanam"><cite title="..more information from web">Wikipedia</cite></a>
+                </small>
+              </footer>
+            </blockquote>
+      </div>
+      <hr style="width: 96%;">
+  </div>
+  <div class="row hideRow" style="margin-top: 10px;">
+    <div class="col-md-4"><img src="img/writer5.jpg" alt="" class="authorImg"></div>
+    <div class="col-md-8">
+        <h3>‎മയ്യഴിപ്പുഴയുടെ തീരങ്ങളിൽ</h3>
+        <blockquote class="blockquote mb-0">
+            <p>M. Mukundan.</p>
+            <footer class="blockquote-footer text-primary">
+              <small>
+                Read More from <a href="https://en.wikipedia.org/wiki/M._Mukundan"><cite title="..more information from web">Wikipedia</cite></a>
+              </small>
+            </footer>
+          </blockquote>
+    </div>
+    <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer6.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>‎കുഞ്ഞുകാര്യങ്ങളുടെ ഒടേതമ്പുരാൻ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Arundhaty Roy.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Arundhati_Roy"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer7.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>‎ഖസാക്കിന്റെ ഇതിഹാസം</h3>
+      <blockquote class="blockquote mb-0">
+          <p>O.V.Vijayan.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/O._V._Vijayan"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer8.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>രണ്ടാമൂഴം</h3>
+      <blockquote class="blockquote mb-0">
+          <p>M.T. Vasudevan Nair.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/M._T._Vasudevan_Nair"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer9.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>ആരാച്ചാർ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>K.R. Meera.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/K._R._Meera"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer10.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>അലാഹയുടെ പെണ്മക്കൾ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Sarah Joseph.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Sarah_Joseph_(author)"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer11.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>ഒരു ദേശത്തിന്റെ കഥ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>S.K. Pottakkatt.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/S._K._Pottekkatt"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer12.jpeg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>അഗ്നി ശലഭങ്ങൾ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>O.N.V Kurup.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/O._N._V._Kurup"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer13.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>ആടുജീവിതം</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Benyamin.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Benyamin_(writer)"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer14.jpeg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>വീണപൂവ്</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Kumaran Asan.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Kumaran_Asan"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer15.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>അപ്പുവിന്റെ അന്വേഷണം</h3>
+      <blockquote class="blockquote mb-0">
+          <p>M. Leelavathy.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/M._Leelavathy"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer16.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>രാത്രിമഴ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Sugathakumari.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Sugathakumari"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer17.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>തത്വമസി</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Sukumar Azhikode.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Sukumar_Azhikode"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+<div class="row hideRow" style="margin-top: 10px;">
+  <div class="col-md-4"><img src="img/writer18.jpg" alt="" class="authorImg"></div>
+  <div class="col-md-8">
+      <h3>ഒരു സങ്കീർത്തനം പോലെ</h3>
+      <blockquote class="blockquote mb-0">
+          <p>Perumbadavam Sreedharan.</p>
+          <footer class="blockquote-footer text-primary">
+            <small>
+              Read More from <a href="https://en.wikipedia.org/wiki/Perumbadavam_Sreedharan"><cite title="..more information from web">Wikipedia</cite></a>
+            </small>
+          </footer>
+        </blockquote>
+  </div>
+  <hr style="width: 96%;">
+</div>
+</div>
+    <div class="moreBooks">
+<button class="btn btn-info" style="float: right;border: 1px solid;border-radius: 10px;" onclick="collapsingRows()">more</button>
+    </div>
+</section>
+            <!-- author-section end -->
+            <!-- footer section -->
+<footer>
+   <div class="container">
+    <h5 class="blinking">Follow Us</h5>
+    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary text-white">Twitter</button>
+        <button id="btn2" type="button" class="btn text-white">Facebook</button>
+        <button type="button" class="btn btn-danger text-white">Google+</button>
+      </div>
+   </div>
+</footer>
+          <!-- footer section end -->
+          <!-- scripts -->
+<script src="js/indexJS.js"></script>
+</body>
+</html>
