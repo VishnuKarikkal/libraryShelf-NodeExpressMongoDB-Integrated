@@ -7,10 +7,10 @@ const app=new express();
 const navAdmin = [
     {link:"/index",name:"Home"},
     {link:"/books",name:"Books"},
-    {link:"/authors",name:"Authors"},
-    {link:"/logout",name:"Logout"},
+    {link:"/authors",name:"Authors"},   
     {link:"/addBooks",name:"Add Book"},
-    {link:"/addBooks/addAuthors",name:"Add Author"}
+    {link:"/addBooks/addAuthors",name:"Add Author"},
+    {link:"/logout",name:"Logout"}
             ];
     const navNormal=[
                 {link:"/index",name:"Home"},
